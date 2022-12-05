@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap');
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+
+.header {
+    background: #181818;
+    padding: 0 5vw;
+    position: relative;
+}
+
+.header-content {
+    /* background-image: url(assets/stranger_things_banner.jpg); */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.header-info {
+    display: flex;
+    max-width: 800px;
+    min-width: 500px;
+    justify-content: center;
+    flex-direction: column;
+    padding: 16px 32px 64px 0;
+    position: relative;
+    width: 35%;
+    z-index: 2;
+}
+
+.header-info::after {
+    background: linear-gradient(90deg, #181818 10%, hsla(0, 0%, 9%, .98) 20%, hsla(0, 0%, 9%, .97) 25%, hsla(0, 0%, 9%, .95) 35%, hsla(0, 0%, 9%, .94) 40%, hsla(0, 0%, 9%, .92) 45%, hsla(0, 0%, 9%, .9) 50%, hsla(0, 0%, 9%, .87) 55%, hsla(0, 0%, 9%, .82) 60%, hsla(0, 0%, 9%, .75) 65%, hsla(0, 0%, 9%, .63) 70%, hsla(0, 0%, 9%, .45) 75%, hsla(0, 0%, 9%, .27) 80%, hsla(0, 0%, 9%, .15) 85%, hsla(0, 0%, 9%, .08) 90%, hsla(0, 0%, 9%, .03) 95%, hsla(0, 0%, 9%, 0));
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: -200px;
+    top: 0;
+    z-index: -2;
+}
+
+.header-cover {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    height: 0;
+    padding-bottom: 55%;
+    z-index: 1;
+}
+
+.info-logo {
+    margin-bottom: 40px;
+}
+
+.info-spacer {
+    color: #a3a3a3;
+    margin: 0 4px;
+}
+
+.info-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.info-data {
+    color: #a3a3a3;
+    display: flex;
+    margin: 10px 0 10px 0;
+    justify-content: space-between;
+}
+
+.info-text {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    max-width: 100%;
+}
+
+.info-cast {
+    color: #fff;
+}
+
+.info-cast .title {
+    color: #a3a3a3;
+}
+
+.bordered-value {
+    border: 1px solid #a1a1a1;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+/* .header-cover {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    height: 0;
+    padding-bottom: 55%;
+    z-index: 1;
+} */
+
+.header-img {
+    background-image: url(assets/stranger_things_banner.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    right: -5%;
+    width: 103%;
+    z-index: 0;
+}
