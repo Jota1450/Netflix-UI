@@ -6,6 +6,7 @@ body {
     margin: 0;
     font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
+    background-color: #181818;
 }
 
 .header {
@@ -102,15 +103,6 @@ body {
     border-radius: 5px;
 }
 
-/* .header-cover {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: row;
-    height: 0;
-    padding-bottom: 55%;
-    z-index: 1;
-} */
-
 .header-img {
     background-image: url(assets/stranger_things_banner.jpg);
     background-position: 50%;
@@ -121,4 +113,72 @@ body {
     right: -5%;
     width: 103%;
     z-index: 0;
+}
+
+.carrusel {
+    margin: 0;
+    scroll-behavior: smooth; 
+}
+
+.carrusel h1 {
+    font-family: Arial;
+    color: red;
+    text-align: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.wrapper section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+}
+
+.wrapper section .item {
+    padding: 0 2px;
+    transition: 250ms all;
+}
+
+.wrapper section .item:hover {
+    margin: 0 40px;
+    transform: scale(1.2);
+}
+
+.wrapper section a {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: black;
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.wrapper section a:nth-of-type(1) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+.wrapper section a:nth-of-type(2) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+@media only screen and (max-width: 600px) {
+    a.arrow__btn {
+      display: none;
+    }
 }
